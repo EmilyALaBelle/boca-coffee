@@ -23,9 +23,9 @@ function displayCoffeeList(coffeeList) {
     })
 }
 
-function getCoffee() {
+function getCoffee(temp) {
     setLoading()
-    fetch(`https://api.sampleapis.com/coffee/hot`)
+    fetch(`https://api.sampleapis.com/coffee/${temp}`)
         .then(responce => responce.json())
         // .then(coffeeList => displayCoffeeList(coffeeList) (does same thing as line below)
         .then(displayCoffeeList)
@@ -33,4 +33,4 @@ function getCoffee() {
 }
 
 
-getCoffee()
+getCoffee('hot')
