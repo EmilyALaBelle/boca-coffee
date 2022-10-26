@@ -1,20 +1,28 @@
 const coffeeContainer = document.querySelector('main')
 
 function setLoading() {
-const h2 = document.createElement('h2')
-h2.innerHTML = 'Loading...'
-}
-
-function getCoffee() {
-    fetch(`https://api.sampleapis.com/coffee/hot`)
-        .then(responce => responce.json())
-       // .then(coffeeList => displayCoffeeList(coffeeList) (does same thing as line below)
-       .then(displayCoffeeList)
-        .catch(console.error) //ToDo: display error for user
+    coffeeContainer.innerHTML = ''
+    const h2 = document.createElement('h2') //create an element called h2
+    const loading = document.createTextNode('LOADING...')
+    h2.appendChild(loading) // Take loading and add inside of h2
+    coffeeContainer.appendChild(h2)
 }
 
 function displayCoffeeList(coffeeList) {
-
+    coffeeContainer.innerHTML - ''
+    coffeeList.map(coffe => {
+        
+    })
 }
+
+function getCoffee() {
+    setLoading()
+    fetch(`https://api.sampleapis.com/coffee/hot`)
+        .then(responce => responce.json())
+        // .then(coffeeList => displayCoffeeList(coffeeList) (does same thing as line below)
+        .then(displayCoffeeList)
+        .catch(console.error) //ToDo: display error for user
+}
+
 
 getCoffee()
