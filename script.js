@@ -1,5 +1,10 @@
 const coffeeContainer = document.querySelector('main')
 
+function setLoading() {
+const h2 = document.createElement('h2')
+h2.innerHTML = 'Loading...'
+}
+
 function getCoffee() {
     fetch(`https://api.sampleapis.com/coffee/hot`)
         .then(responce => responce.json())
@@ -9,6 +14,7 @@ function getCoffee() {
 }
 
 function displayCoffeeList(coffeeList) {
+
 }
 
 getCoffee()
