@@ -11,7 +11,10 @@ function setLoading() {
 function displayCoffeeList(coffeeList) {
     coffeeContainer.innerHTML - ''
     coffeeList.map(coffe => {
-        
+const card = document.createElement('div')
+const img = document.createElement('img')
+const title = document.createElement('h3')
+const description = document.createElement('p')        
     })
 }
 
