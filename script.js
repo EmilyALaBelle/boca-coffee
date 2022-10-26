@@ -1,3 +1,5 @@
+const coffeeContainer = document.querySelector('main')
+
 function getCoffee() {
     fetch(`https://api.sampleapis.com/coffee/hot`)
         .then(responce => responce.json())
@@ -7,7 +9,6 @@ function getCoffee() {
 }
 
 function displayCoffeeList(coffeeList) {
-
 }
 
 getCoffee()
