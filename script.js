@@ -3,13 +3,13 @@ const coffeeContainer = document.querySelector('main')
 function setLoading() {
     coffeeContainer.innerHTML = ''
     const h2 = document.createElement('h2') //create an element called h2
-    const loading = document.createTextNode('LOADING...')
+    const loading = document.createTextNode('LOADING...')//creates a text node called loading
     h2.appendChild(loading) // Take loading and add inside of h2
-    coffeeContainer.appendChild(h2)
+    coffeeContainer.appendChild(h2) //go to coffee containerand add the h2 element to it
 }
 
 function displayCoffeeList(coffeeList) {
-    coffeeContainer.innerHTML - ''
+    coffeeContainer.innerHTML = '' //clears the contents of the coffee container
     coffeeList.map(coffee => {
         const card = document.createElement('div')
         //const img = document.createElement('img')
