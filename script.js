@@ -10,11 +10,16 @@ function setLoading() {
 
 function displayCoffeeList(coffeeList) {
     coffeeContainer.innerHTML - ''
-    coffeeList.map(coffe => {
-const card = document.createElement('div')
-const img = document.createElement('img')
-const title = document.createElement('h3')
-const description = document.createElement('p')        
+    coffeeList.map(coffee => {
+        const card = document.createElement('div')
+        //const img = document.createElement('img')
+        const title = document.createElement('h3') //creates an h3 called title
+        const description = document.createElement('p') //creates a p called description
+        title.appendChild(document.createTextNode(coffee.title)) //create text that it gets from coffe title the go to title and stick the coffe title  inside of it
+        description.appendChild(document.createTextNode(coffee.description))  // Go to the coffee and grab the descripton and craete a text element and stick it inside of description
+        card.appendChild(title)// stick title inside of card
+        card.appendChild(description) //stick descripton inside of card (append means add to the end)
+        coffeeContainer.appendChild(card)//Go to coffee container and add the card to it 
     })
 }
 
